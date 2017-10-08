@@ -40,10 +40,8 @@ export class AppComponent {
       tempArray.splice(tempArray.indexOf(finalRest), 0, finalRest);
     }
     var array = res.concat(tempArray.reverse());
-    if (rest < result) {
-        if (rest > 0) {
-            array.splice(array.lastIndexOf(rest), 0, rest);
-        }
+    if (rest < result && rest > 0) {
+        array.splice(array.lastIndexOf(rest), 0, rest);
     }
     return array;
   }
