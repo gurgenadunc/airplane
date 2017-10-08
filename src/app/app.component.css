@@ -1,0 +1,20 @@
+.airplane {
+    position: relative;
+}
+
+.move {
+    animation-name: airplane;
+    animation-duration: 3.5s;
+}
+
+@keyframes airplane {
+    0% {left: 0px; transform: rotate(-25deg)}
+    100% {left: 300px; transform: rotate(0deg)}
+}
+
+.speed-container {
+    background: papayawhip;
+    display: flex;
+    width: 430px;
+    justify-content: space-evenly;
+}

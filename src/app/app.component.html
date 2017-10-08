@@ -1,0 +1,17 @@
+<form>
+  <input #distance type="number" placeholder="distance">
+  <button (click)="moveAirplane(distance.value)">Start</button>
+</form>
+<div class="airplane-container">
+  <img src="assets/airline.svg" width="100" class="airplane" 
+            [ngStyle]=" {'left': airplaneLeft }" [ngClass]="{ 'move': move }">
+  <div *ngIf="speedResult"  class="speedResult">
+    <div class="speed-container">
+      <p *ngFor="let speed of speedResult">
+        {{ speed }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
